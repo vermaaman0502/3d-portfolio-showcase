@@ -24,8 +24,8 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 0.8 }}
         >
-          <span className="text-foreground">Alex </span>
-          <span className="gradient-text text-glow">Morgan</span>
+          <span className="text-foreground">Aman </span>
+          <span className="gradient-text text-glow">Verma</span>
         </motion.h1>
 
         {/* Title */}

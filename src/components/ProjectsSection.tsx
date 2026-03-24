@@ -4,16 +4,16 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
-    title: "Nebula Dashboard",
-    description: "A real-time analytics dashboard with 3D data visualizations and interactive charts.",
-    tags: ["React", "Three.js", "D3.js"],
+    title: "AI Workflow Automation Tool",
+    description: "A no-code AI orchestration platform supporting DAG-based LLM pipelines with drag-and-drop workflow editor, conditional & memory nodes, retries, state persistence, and observability. Think Zapier + LangChain + Make.com for AI workflows.",
+    tags: ["FastAPI", "React Flow", "OpenAI", "Redis", "PostgreSQL", "Celery"],
     color: "from-primary/20 to-accent/20",
     borderColor: "hover:border-primary/40",
   },
   {
-    title: "Synthwave Studio",
-    description: "A browser-based music production tool with WebAudio API and visual synthesizer.",
-    tags: ["TypeScript", "WebAudio", "Canvas"],
+    title: "Nebula Dashboard",
+    description: "A real-time analytics dashboard with 3D data visualizations and interactive charts.",
+    tags: ["React", "Three.js", "D3.js"],
     color: "from-accent/20 to-pink-500/20",
     borderColor: "hover:border-accent/40",
   },
