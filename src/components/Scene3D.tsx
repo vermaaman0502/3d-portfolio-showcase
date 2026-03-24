@@ -84,7 +84,7 @@ function NeuralNetwork() {
 
 /** Central AI brain sphere with distortion */
 function AIBrainSphere() {
-  const meshRef = useRef<THREE.Mesh>(null);
+  const meshRef = useRef<THREE.Group>(null);
   const innerRef = useRef<THREE.Mesh>(null);
 
   useFrame(({ clock, mouse }) => {
