@@ -77,21 +77,23 @@ const ProjectsSection = () => {
           </p>
         </motion.div>
 
-        {/* Featured project — full width */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.2, duration: 0.6 }}
-          onMouseEnter={() => setHoveredIndex(0)}
-          onMouseLeave={() => setHoveredIndex(null)}
-          className={`group relative p-8 md:p-10 rounded-2xl border border-border bg-card/30 backdrop-blur-sm ${projects[0].borderColor} ${projects[0].glowColor} transition-all duration-500 cursor-pointer overflow-hidden mb-6`}
-        >
-          <div className={`absolute inset-0 bg-gradient-to-br ${projects[0].color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
-          <div className="relative z-10">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-2.5 rounded-lg bg-primary/10 text-primary">
-                <projects[0].icon size={20} />
-              </div>
+        {(() => {
+          const FeaturedIcon = projects[0].icon;
+          return (
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            onMouseEnter={() => setHoveredIndex(0)}
+            onMouseLeave={() => setHoveredIndex(null)}
+            className={`group relative p-8 md:p-10 rounded-2xl border border-border bg-card/30 backdrop-blur-sm ${projects[0].borderColor} ${projects[0].glowColor} transition-all duration-500 cursor-pointer overflow-hidden mb-6`}
+          >
+            <div className={`absolute inset-0 bg-gradient-to-br ${projects[0].color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+            <div className="relative z-10">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2.5 rounded-lg bg-primary/10 text-primary">
+                  <FeaturedIcon size={20} />
+                </div>
               <div>
                 <span className="text-xs font-mono text-muted-foreground block">{projects[0].subtitle}</span>
                 <span className="text-xs font-mono text-primary">★ Featured Project</span>
