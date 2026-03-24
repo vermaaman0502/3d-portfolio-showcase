@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Code2, Palette, Zap } from "lucide-react";
+import { Brain, Cpu, Workflow } from "lucide-react";
 
 const highlights = [
-  { icon: Code2, label: "Clean Code", desc: "Writing maintainable, scalable solutions" },
-  { icon: Palette, label: "Creative Design", desc: "Blending aesthetics with functionality" },
-  { icon: Zap, label: "Performance", desc: "Optimizing for speed and efficiency" },
+  { icon: Brain, label: "LLM Engineering", desc: "Designing and deploying large language model pipelines at scale" },
+  { icon: Workflow, label: "AI Orchestration", desc: "Building DAG-based workflows for complex multi-agent systems" },
+  { icon: Cpu, label: "MLOps & Infra", desc: "End-to-end ML infrastructure with observability and auto-scaling" },
 ];
 
 const AboutSection = () => {
@@ -23,7 +23,7 @@ const AboutSection = () => {
         >
           <p className="text-primary font-mono text-sm mb-3">01 — About</p>
           <h2 className="text-4xl md:text-5xl font-bold font-display mb-12">
-            Building the <span className="gradient-text">future</span> of the web
+            Engineering <span className="gradient-text-ai">intelligence</span>
           </h2>
         </motion.div>
 
@@ -36,25 +36,26 @@ const AboutSection = () => {
             className="space-y-6"
           >
             <p className="text-muted-foreground leading-relaxed text-lg">
-              I'm a creative developer with 5+ years of experience building immersive web
-              experiences. I specialize in React, Three.js, and WebGL — turning complex
-              ideas into elegant, performant applications.
+              I'm an AI engineer passionate about building intelligent systems that solve
+              real-world problems. I specialize in LLM pipelines, autonomous agents, and
+              no-code AI platforms — bridging the gap between cutting-edge research and production.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              When I'm not coding, you'll find me exploring generative art, contributing to
-              open-source projects, or experimenting with new creative technologies.
-              I believe in the power of thoughtful design and clean architecture.
+              From fine-tuning foundation models to architecting multi-agent orchestration 
+              systems, I focus on making AI accessible, reliable, and scalable. I believe
+              the best AI products are built at the intersection of great engineering and 
+              deep domain understanding.
             </p>
 
             {/* Stats */}
             <div className="flex gap-8 pt-4">
               {[
-                { num: "5+", label: "Years Experience" },
-                { num: "50+", label: "Projects Built" },
-                { num: "30+", label: "Happy Clients" },
+                { num: "15+", label: "AI Projects" },
+                { num: "5+", label: "LLM Pipelines" },
+                { num: "10M+", label: "Tokens Processed" },
               ].map((stat) => (
                 <div key={stat.label}>
-                  <p className="text-3xl font-bold text-primary">{stat.num}</p>
+                  <p className="text-3xl font-bold text-primary text-glow-neural">{stat.num}</p>
                   <p className="text-sm text-muted-foreground">{stat.label}</p>
                 </div>
               ))}
@@ -71,7 +72,7 @@ const AboutSection = () => {
             {highlights.map((item, i) => (
               <motion.div
                 key={item.label}
-                className="p-6 rounded-xl bg-card/50 backdrop-blur-sm border border-border hover:border-primary/30 transition-all duration-300 group"
+                className="p-6 rounded-xl bg-card/50 backdrop-blur-sm border border-border hover:border-primary/30 hover:box-glow-neural transition-all duration-300 group"
                 whileHover={{ x: 8 }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
