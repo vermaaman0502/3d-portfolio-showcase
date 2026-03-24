@@ -3,30 +3,30 @@ import { useRef } from "react";
 
 const skillCategories = [
   {
-    title: "Frontend",
+    title: "AI / ML",
     skills: [
-      { name: "React / Next.js", level: 95 },
-      { name: "TypeScript", level: 90 },
-      { name: "Three.js / WebGL", level: 85 },
-      { name: "Tailwind CSS", level: 92 },
+      { name: "LLM Engineering (GPT, Claude)", level: 95 },
+      { name: "LangChain / LangGraph", level: 90 },
+      { name: "PyTorch / Transformers", level: 85 },
+      { name: "RAG & Vector Databases", level: 92 },
     ],
   },
   {
-    title: "Creative",
+    title: "Backend & Infra",
     skills: [
-      { name: "GSAP / Framer Motion", level: 88 },
-      { name: "Shader Programming", level: 70 },
-      { name: "UI/UX Design", level: 80 },
-      { name: "Figma / Adobe Suite", level: 75 },
+      { name: "FastAPI / Python", level: 92 },
+      { name: "PostgreSQL / Redis", level: 88 },
+      { name: "Docker / Kubernetes", level: 80 },
+      { name: "Celery / Kafka", level: 78 },
     ],
   },
   {
-    title: "Backend & Tools",
+    title: "Frontend & Tools",
     skills: [
-      { name: "Node.js", level: 82 },
-      { name: "PostgreSQL", level: 78 },
+      { name: "React / TypeScript", level: 90 },
+      { name: "React Flow / Three.js", level: 82 },
       { name: "Git / CI/CD", level: 88 },
-      { name: "Docker", level: 72 },
+      { name: "MLflow / W&B", level: 75 },
     ],
   },
 ];
@@ -45,7 +45,7 @@ const SkillsSection = () => {
         >
           <p className="text-primary font-mono text-sm mb-3">03 — Skills</p>
           <h2 className="text-4xl md:text-5xl font-bold font-display mb-16">
-            My <span className="gradient-text">toolkit</span>
+            My <span className="gradient-text-ai">toolkit</span>
           </h2>
         </motion.div>
 
@@ -56,7 +56,7 @@ const SkillsSection = () => {
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.2 + catIdx * 0.2, duration: 0.6 }}
-              className="p-6 rounded-2xl bg-card/30 backdrop-blur-sm border border-border hover:border-primary/20 transition-all duration-300"
+              className="p-6 rounded-2xl bg-card/30 backdrop-blur-sm border border-border hover:border-primary/20 hover:box-glow-neural transition-all duration-300"
             >
               <h3 className="text-lg font-bold font-display text-primary mb-6">{category.title}</h3>
 
@@ -86,14 +86,14 @@ const SkillsSection = () => {
           ))}
         </div>
 
-        {/* Tech orbit - decorative */}
+        {/* Tech tags */}
         <motion.div
           className="mt-16 flex flex-wrap justify-center gap-3"
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ delay: 1, duration: 0.6 }}
         >
-          {["React", "Three.js", "TypeScript", "Node.js", "WebGL", "GLSL", "Tailwind", "Figma", "Git", "Docker"].map(
+          {["OpenAI", "LangChain", "PyTorch", "Hugging Face", "RAG", "ChromaDB", "Pinecone", "FastAPI", "Redis", "Celery", "React", "Kubernetes"].map(
             (tech, i) => (
               <motion.span
                 key={tech}
