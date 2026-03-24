@@ -124,6 +124,8 @@ const ProjectsSection = () => {
             animate={hoveredIndex === 0 ? { scale: 1.2 } : { scale: 1 }}
           />
         </motion.div>
+          );
+        })()}
 
         {/* Other projects — grid */}
         <div className="grid md:grid-cols-2 gap-6">
