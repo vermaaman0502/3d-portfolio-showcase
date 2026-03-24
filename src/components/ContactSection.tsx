@@ -126,7 +126,7 @@ const ContactSection = () => {
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ delay: 0.8 }}
         >
-          <p>© 2026 Alex Morgan. Built with React & Three.js</p>
+          <p>© 2026 Aman Verma. Built with React & Three.js</p>
         </motion.div>
       </div>
     </section>
